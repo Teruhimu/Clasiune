@@ -1,0 +1,32 @@
+<div class="animated fadeIn">
+  <div class="row">
+      <div class="col-lg-12">
+          <div class="card">
+              <div class="card-header text-white bg-info">
+                  <i class="fa fa-align-justify"></i> Productos
+                 
+                  <div class="card-actions ">
+                      
+                  </div>
+              </div>
+              <div class="card-body" style="overflow-x:auto;">
+                 
+                      <ul class="list-group list-group-flush" ng-repeat="c in vm.productos">
+                        <li class="list-group-item"> 
+                            <a  >{{c.productoDenominacion}} - {{c.productoPrecio | number}} G$ 
+                              
+                              <br>
+                              Observacion: {{c.productoDescripcion}}
+                              <br>
+                              Vendedor: {{c.usuarioNombreApellido}} - {{c.usuarioNumero}}
+                            </a>
+                            
+                        </li>
+                      </ul>
+                    
+                    
+          </div>
+      </div>
+  </div>
+</div>
+</div>
