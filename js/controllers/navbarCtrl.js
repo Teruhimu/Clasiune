@@ -14,7 +14,7 @@
         activate()
         
         function activate() {
-            // vm.usuarioNombre = $auth.getPayload().appuserNombre
+            vm.usuarioNombre = $auth.getPayload().usuarioNombreApellido
         }
         vm.logout = function () {
 

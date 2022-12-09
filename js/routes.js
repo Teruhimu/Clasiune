@@ -341,6 +341,59 @@ angular
           }]
         }
       })
-     
+      .state('app.test', {
+        url: '/test',
+        templateUrl: 'views/test.html',
+        controller: 'testCtrl',
+        controllerAs: 'vm',
+        ncyBreadcrumb: {
+          label: 'Test',
+        },
+        resolve: {
+          loadMyCtrl: ['$ocLazyLoad', function ($ocLazyLoad) {
+            
+            return $ocLazyLoad.load({
+              files: ['js/controllers/testCtrl.js']
+            });
+          }]
+        }
+      })
+
+      .state('app.testRegistrar', {
+        url: '/test-registrar',
+        templateUrl: 'views/test-form.html',
+        controller: 'testFormCtrl',
+        controllerAs: 'vm',
+        params: { subtitle: 'Registrar test' },
+        ncyBreadcrumb: {
+          label: 'Registrar Test',
+        },
+        resolve: {
+          loadMyCtrl: ['$ocLazyLoad', function ($ocLazyLoad) {
+            
+            return $ocLazyLoad.load({
+              files: ['js/controllers/testFormCtrl.js']
+            });
+          }]
+        }
+      })
+      .state('app.testEditar', {
+        url: '/test-editar/:id',
+        templateUrl: 'views/test-form.html',
+        controller: 'testFormCtrl',
+        controllerAs: 'vm',
+        params: { subtitle: 'Editar  test' },
+        ncyBreadcrumb: {
+          label: 'Editar  Test',
+        },
+        resolve: {
+          loadMyCtrl: ['$ocLazyLoad', function ($ocLazyLoad) {
+            
+            return $ocLazyLoad.load({
+              files: ['js/controllers/testFormCtrl.js']
+            });
+          }]
+        }
+      })
 
   }]);
